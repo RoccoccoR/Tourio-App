@@ -14,10 +14,6 @@ export default async function handler(request, response) {
   } else if (request.method === "POST") {
     try {
       const placeData = request.body;
-
-      // const place = new Place(placeData);
-
-      // await place.save();
       const createPlace = await Place.create(placeData);
       response.status(201).json({ status: "New place created" });
     } catch (error) {
