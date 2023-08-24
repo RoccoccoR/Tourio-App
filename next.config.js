@@ -20,6 +20,21 @@ const nextConfig = {
         hostname: "images.unsplash.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "en.wikipedia.org",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "www.google.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "surfiran.com",
+        port: "",
+      },
     ],
   },
 };
