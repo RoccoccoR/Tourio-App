@@ -16,6 +16,7 @@ export default async function handler(request, response) {
     }
 
     response.status(200).json(place);
+    return;
   }
   if (request.method === "PATCH") {
     const placeToUpdate = await Place.findByIdAndUpdate(id, {
@@ -23,11 +24,12 @@ export default async function handler(request, response) {
     });
 
     response.status(200).json(placeToUpdate);
+    return;
   }
   if (request.method === "DELETE") {
     const placeToDelete = await Place.findByIdAndDelete(id);
-
     response.status(200).json(placeToDelete);
+    return;
   }
   return response.status(405).json({ message: "Not Found" });
 }
