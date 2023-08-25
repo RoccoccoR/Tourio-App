@@ -5,9 +5,12 @@ export default async function handler(request, response) {
   await dbConnect();
   const id = request.query.id;
 
+  if (!id) {
+    return;
+  }
+  console.log("__________________");
   if (request.method === "GET") {
     const place = await Place.findById(id);
-    console.log("______________________________________");
     if (!place) {
       return response.status(404).json({ status: "Not Found" });
     }
