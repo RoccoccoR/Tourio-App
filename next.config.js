@@ -40,6 +40,11 @@ const nextConfig = {
         hostname: "www.eventim.de",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "images.google.com",
+        port: "",
+      },
     ],
   },
 };
