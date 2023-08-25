@@ -35,6 +35,11 @@ const nextConfig = {
         hostname: "surfiran.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "www.eventim.de",
+        port: "",
+      },
     ],
   },
 };
