@@ -14,7 +14,6 @@ export default async function handler(request, response) {
     response.status(200).json(place);
   }
   if (request.method === "PATCH") {
-    console.log("_______________________________________", request.body);
     const placeToUpdate = await Place.findByIdAndUpdate(id, {
       $set: request.body,
     });
@@ -26,5 +25,5 @@ export default async function handler(request, response) {
 
     response.status(200).json(placeToDelete);
   }
-  return response.status(405).json({ message: "Method not allowed" });
+  return response.status(405).json({ message: "Not Found" });
 }
