@@ -4,7 +4,7 @@ import Place from "../../../../db/models/Place";
 export default async function handler(request, response) {
   await dbConnect();
   const id = request.query.id;
-
+  console.log("id of places", id);
   if (!id) {
     return;
   }

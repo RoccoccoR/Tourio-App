@@ -40,6 +40,7 @@ export default function DetailsPage() {
   } = useSWR(id ? `/api/places/${id}` : null);
   console.log(id);
   if (!isReady || isLoading || error) return <h2>Loading...</h2>;
+  if (place) console.log(place);
 
   async function deletePlace() {
     await fetch(`/api/places/${id}`, {
